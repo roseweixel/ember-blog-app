@@ -1,10 +1,13 @@
-<h2>Howdy from Posts</h2>
+<h2>Posts</h2>
+Total Posts: {{postCount}}
 <section class="row">
 	<div class="col-xs-4">
 	<ul>
 	{{#each post in controller}}
+	{{!-- {{#each}} --}}
 	  <li>
 	  	{{#link-to 'post' post}}{{post.title}}{{/link-to}}
+	  	{{!-- {{#link-to 'post' post}}{{post}}{{/link-to}} --}}
 	  </li>
 	{{/each}}
 	</ul>
@@ -13,3 +16,6 @@
 		{{outlet}}
 	</div>
 </section>
+
+{{!-- recent-post is not only the name of the view, it is also the name of the controller (RecentPost) --}}
+{{render 'recent-post' recentPost}}

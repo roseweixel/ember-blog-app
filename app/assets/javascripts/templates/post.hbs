@@ -1,8 +1,16 @@
+<button class='btn btn-success' {{action 'startEdit'}}>Edit</button>
+{{#if editing}}
+  <button {{action 'savePost'}}>Save</button>
+  {{input class="form-control" valueBinding="title"}}
+  {{textarea class="form-control" valueBinding="body"}}
+  {{input class="form-control" valueBinding="levelOfRage"}}
+{{else}}
 <h2>{{title}}</h2>
 <p>
 	{{body}}
 </p>
 
 <h5>
-	{{levelOfRage}}
+	rage level: {{levelOfRage}}
 </h5>
+{{/if}}

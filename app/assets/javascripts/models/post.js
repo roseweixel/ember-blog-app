@@ -3,5 +3,6 @@
 IronBlogger.Post = DS.Model.extend({
   title: DS.attr('string'),
   body: DS.attr('string'),
-  levelOfRage: DS.attr('string')
+  levelOfRage: DS.attr('string'),
+  updatedAt: DS.attr('date')
 });
